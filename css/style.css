@@ -141,8 +141,8 @@ h6 {
 .wrapper .wrapper__container .bg {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 20px;
+  width: calc(100% - 40px);
   height: 500vh
 }
 .header__container {
