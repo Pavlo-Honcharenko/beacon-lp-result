@@ -134,6 +134,9 @@ h6 {
   min-width: 0;
   grid-column: 3/4
 }
+.wrapper {
+  background: url(../img/bg.png)
+}
 .header__container {
   width: 100%;
   display: flex;
@@ -160,9 +163,15 @@ h6 {
   transform: translate(0,-2px)
 }
 .social-link {
-  transition: -webkit-transform .3s ease 0s;
-  transition: transform .3s ease 0s;
-  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s
+  width: 32px;
+  flex: 0 0 32px;
+  height: 32px
+}
+.social-link-twitter {
+  background: url(../img/twitter.png) center center no-repeat
+}
+.social-link-linkedin {
+  background: url(../img/linkedin.png) center center no-repeat
 }
 .hero__title {
   font-weight: 800;
@@ -253,7 +262,20 @@ h6 {
     padding-bottom: 1.875rem
   }
 }
+@media (max-width:1650px) {
+  .wrapper {
+    background: url(../img/bg.png) center center/100% 100% no-repeat
+  }
+}
+@media (max-width:450px) {
+  .hero__button {
+    width: 100%
+  }
+}
 @media (max-width:47.99875em) {
+  .wrapper {
+    background: initial
+  }
   .header__social-links {
     display: none
   }
@@ -337,11 +359,13 @@ h6 {
   }
 }
 @media (any-hover:hover) {
-  .social-link:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1)
+  .social-link-twitter:hover {
+    background: url(../img/twitter-blue.png) center center no-repeat
+  }
+  .social-link-linkedin:hover {
+    background: url(../img/linkedin-blue.png) center center no-repeat
   }
   .hero__button:hover {
-    background-color: #4151ad
+    background-color: #4757b5
   }
 }
