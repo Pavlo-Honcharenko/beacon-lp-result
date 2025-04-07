@@ -134,8 +134,16 @@ h6 {
   min-width: 0;
   grid-column: 3/4
 }
-.wrapper {
-  background: url(../img/bg.png)
+.wrapper .wrapper__container {
+  position: relative;
+  width: 100%
+}
+.wrapper .wrapper__container .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500vh
 }
 .header__container {
   width: 100%;
@@ -227,6 +235,11 @@ h6 {
   margin-left: auto;
   display: none
 }
+@media (min-width:47.99875em) {
+  .wrapper .wrapper__container .bg {
+    background: url(../img/bg.png) center center/100% 100% no-repeat
+  }
+}
 @media (min-width:78.75em) {
   .header__container {
     padding-top: 3.125rem
@@ -262,20 +275,12 @@ h6 {
     padding-bottom: 1.875rem
   }
 }
-@media (max-width:1650px) {
-  .wrapper {
-    background: url(../img/bg.png) center center/100% 100% no-repeat
-  }
-}
 @media (max-width:450px) {
   .hero__button {
     width: 100%
   }
 }
 @media (max-width:47.99875em) {
-  .wrapper {
-    background: initial
-  }
   .header__social-links {
     display: none
   }
